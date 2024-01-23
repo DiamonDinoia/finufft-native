@@ -1,0 +1,19 @@
+[build-system]
+requires = [
+            "setuptools >= 61.0",
+            "pyfinufft @ git+https://github.com/DiamonDinoia/finufft@nanobind"
+            ]
+
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "pyfinufft-native"
+version = "0.0.1"
+description = "Python bindings for the FINUFFT C++ library"
+readme = "readme.md"
+requires-python = ">=3.8"
+
+[tool.cibuildwheel]
+# Necessary to see build output from the actual compilation
+build-verbosity = 1
